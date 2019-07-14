@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../heroes/hero';
+import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-heroes',
@@ -8,14 +9,21 @@ import { Hero } from '../heroes/hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
+ 
+  heroes = HEROES;
+  // just tellng the type selectedHero, not mandatory
+  selectedHero: Hero;
+ 
+  constructor() { 
+    console.log("initialization inside constructor");
   }
-  constructor() { }
-
+ 
   ngOnInit() {
-    console.log("initialization of onInit()");
+  }
+
+ // again just tellng the type selectedHero, not mandatory
+//  will work with just hero
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
 }
