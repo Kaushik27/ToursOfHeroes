@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
   }
 
- // again just tellng the type selectedHero, not mandatory
+// again just tellng the type selectedHero, not mandatory
 //  will work with just hero
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
