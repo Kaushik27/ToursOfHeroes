@@ -9,20 +9,21 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
- 
+
   heroes = HEROES;
   // just tellng the type selectedHero, not mandatory
   selectedHero: Hero;
- 
-  constructor() { 
-    console.log("initialization inside constructor");
-  }
- 
-  ngOnInit() {
+
+  constructor() {
+    console.log("inside constructor");
   }
 
-// again just tellng the type selectedHero, not mandatory
-//  will work with just hero
+  ngOnInit() {
+    console.log("inside ngOnInit");
+  }
+
+  // again just tellng the type selectedHero, not mandatory
+  //  will work with just hero
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
