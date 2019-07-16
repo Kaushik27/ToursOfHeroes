@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
   // heroes = HEROES;
   heroes: Hero[];
   // just tellng the type selectedHero, not mandatory
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
   // constructor(private heroService: HeroService) {
   //   console.log("inside constructor", heroService);
@@ -32,9 +32,9 @@ export class HeroesComponent implements OnInit {
 
   // again just tellng the type selectedHero, not mandatory
   // will work with just hero
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  // }
 
   // getHeroes(): void {
   //   this.heroes = this.heroService.getHeroes();
